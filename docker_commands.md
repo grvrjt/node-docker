@@ -21,3 +21,10 @@ docker run -d \
 --net mongo-network \
 --name mongo-express \
 mongo-express
+
+## to build the image of app
+1. create an empty repo on dockerhub.com
+2. from the terminal 
+   docker build -t grvsrjt/my-app:1.0 .
+   docker login 
+   docker push grvsrjt/my-app:1.0
