@@ -1,12 +1,14 @@
-# syntax=docker/dockerfile:1
-FROM node:12.18.1
-ENV NODE_ENV=production
+FROM node:20-alpine
 
-WORKDIR /app
-COPY ["package.json","package-lock.json", "./"]
+RUN mkdir -p /home/app
 
-RUN npm install --production
+COPY ./app /home/app
 
-COPY . . 
+# set default dir so that next commands executes in /home/app dir
+WORKDIR /home/app
 
-CMD ["node","server.js"]
+# will execute npm install in /home/app because of WORKDIR
+RUN npm install
+
+# no need for /home/app/server.js because of WORKDIR
+CMD ["node", "server.js"]
