@@ -45,3 +45,9 @@ mongo-express
 
 ## Docker Networking 
 1. docker network inspect bridge 
+
+
+## Push to docker hub 
+1. docker build -t grvsrjt/my-app:1.0 .
+2. docker login 
+3. docker push grvsrjt/my-app:1.0
