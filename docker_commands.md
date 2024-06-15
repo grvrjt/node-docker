@@ -28,3 +28,20 @@ mongo-express
    docker build -t grvsrjt/my-app:1.0 .
    docker login 
    docker push grvsrjt/my-app:1.0
+
+## Docker Compose 
+1. DOCKER
+ docker logs <container_id>
+
+2. DOCKER-COMPOSE
+  docker-compose -f <file_name> up
+  docker-compose -f <file_name> down
+  docker-compose -f <file_name> stop
+
+## Docker Volume 
+
+
+
+
+## Docker Networking 
+1. docker network inspect bridge 
